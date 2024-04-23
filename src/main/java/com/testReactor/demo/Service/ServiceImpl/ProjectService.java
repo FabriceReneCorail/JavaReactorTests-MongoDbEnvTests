@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 @Component
 public interface ProjectService {
 
-    Mono<Insured> getMainInsured(Project project);
+    Flux<Insured> getMainInsured(Project project);
 
     Flux<Insured> getAllInsureds(Project project);
 

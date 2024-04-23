@@ -9,5 +9,5 @@ import java.util.List;
 @Data
 public class Project {
     private String projectId;
-    private List<Offer> offer;
+    private List<Offer> offers;
 }

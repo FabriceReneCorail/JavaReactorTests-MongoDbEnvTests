@@ -1,9 +1,9 @@
 package com.testReactor.demo.Service.ServiceImpl;
 
 import com.testReactor.demo.Models.Insured;
-import org.springframework.data.repository.CrudRepository;
-import reactor.core.publisher.Mono;
+import com.testReactor.demo.Models.Project;
+import reactor.core.publisher.Flux;
 
-public interface InsuredService extends CrudRepository {
-    Mono<Insured> getMainInsured();
+public interface InsuredService {
+    Flux<Insured> getAllInsured(Project project);
 }
