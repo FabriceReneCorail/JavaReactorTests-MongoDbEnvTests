@@ -9,6 +9,6 @@ public class Insured {
     private String id;
     private String firstName;
     private String lastName;
-    private InsuredStatus insuredStatus;
+    private InsuredStatus status;
     private InsuredInformation insuredInformations;
 }

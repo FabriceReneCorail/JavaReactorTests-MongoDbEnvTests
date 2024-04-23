@@ -4,7 +4,6 @@ import com.testReactor.demo.Models.Insured;
 import com.testReactor.demo.Models.Project;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 @Component
 public interface ProjectService {
