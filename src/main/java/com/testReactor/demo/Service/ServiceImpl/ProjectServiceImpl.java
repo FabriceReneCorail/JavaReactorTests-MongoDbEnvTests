@@ -13,7 +13,7 @@ public class ProjectServiceImpl implements ProjectService {
     private InsuredService insuredService;
     @Override
     public Mono<Insured> getMainInsured(Project project) {
-        return Flux.just(project).map(insured -> insuredService.getMainInsured());
+        return Mono.just(project).map(insured -> insuredService.getMainInsured());
     }
 
     @Override
