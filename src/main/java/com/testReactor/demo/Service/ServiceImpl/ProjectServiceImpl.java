@@ -16,7 +16,7 @@ public class ProjectServiceImpl implements ProjectService {
     public Flux<Insured> getMainInsured(Project project) {
         return Flux.fromIterable(project.getOffers())
                 .flatMap(offer -> Flux.fromIterable(offer.getInsured()))
-                .filter(insured -> insured.getInsuredStatus() == InsuredStatus.MAIN_INSURED);
+                .filter(insured -> insured.getStatus() == InsuredStatus.MAIN_INSURED);
     }
 
     @Override
