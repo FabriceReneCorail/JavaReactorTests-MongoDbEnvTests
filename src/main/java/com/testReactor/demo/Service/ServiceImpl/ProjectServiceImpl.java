@@ -6,7 +6,6 @@ import com.testReactor.demo.Models.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 @Component
 public class ProjectServiceImpl implements ProjectService {
@@ -20,7 +19,8 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public Flux<Insured> getAllInsureds(Project project) {
-        return null;
+    public Flux<Insured> getAllInsuredFromProject(Project project) {
+        return Flux.fromIterable(project.getOffers())
+                .flatMap(offer -> Flux.fromIterable(offer.getInsured()));
     }
 }

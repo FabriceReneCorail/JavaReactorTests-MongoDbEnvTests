@@ -10,6 +10,6 @@ public interface ProjectService {
 
     Flux<Insured> getMainInsured(Project project);
 
-    Flux<Insured> getAllInsureds(Project project);
+    Flux<Insured> getAllInsuredFromProject(Project project);
 
 }
